@@ -8,11 +8,11 @@
 
 <ul class="meta_data">
     <li>
-      <img src="/images/date_posted.png" alt="" width="26" height="26" /> Posted {{ post.date | date_to_string }}
+      <img src="images/date_posted.png" alt="" width="26" height="26" /> Posted {{ post.date | date_to_string }}
     </li>
     {% if page.title != post.title %}
     <li>
-      <a href="{{ post.url }}" title="[Permalink] {{ post.title }}"><img src="/images/read_more.png" alt="" width="26" height="26" /> Read full article</a>
+      <a href="{{ post.url }}" title="[Permalink] {{ post.title }}"><img src="images/read_more.png" alt="" width="26" height="26" /> Read full article</a>
     </li>
     {% else %}
     <li>Tags: {% include tag_cloud.html %}</li>
