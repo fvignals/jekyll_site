@@ -1,0 +1,13 @@
+---
+layout: default
+title: "Posted in category: projects"
+syntax-highlighting: yes
+---
+  <h1 class="title">projects</h1>
+  {% for post in site.posts %}
+    {% for category in post.categories %}
+      {%if category == "projects" %}
+        {%include post.html%}
+      {%endif%}
+    {%endfor%}
+  {% endfor %}

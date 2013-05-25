@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="aside">
+        <h1><a href="/">My Jekyll Site</a></h1>
+        <p>Sub-Heading</p>
+        <p>Tags: {% include tag_cloud.html %}</p>
+        <p>Categories: {% include category_cloud.html %}</p>
+      </div>
+      <div id="content">
+        {{ content }}
+
+<div id="pagination">
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+      <a href="/" title="Previous Page">&laquo; Previous</a>
+      {% else %}
+      <a href="/page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Previous</a>
+      {% endif %}
+    {% endif %}
+    
+    {% if paginator.next_page %} 
+    <a href="/page{{ paginator.next_page }}/" title="Next Page">Next &raquo;</a>
+    {% endif %} 
+  </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

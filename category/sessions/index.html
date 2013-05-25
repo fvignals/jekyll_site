@@ -1,0 +1,13 @@
+---
+layout: default
+title: "Posted in category: sessions"
+syntax-highlighting: yes
+---
+  <h2 class="title">Category: sessions</h2>
+  {% for post in site.posts %}
+    {% for category in post.categories %}
+      {%if category == "sessions" %}
+        {%include post.html%}
+      {%endif%}
+    {%endfor%}
+  {% endfor %}

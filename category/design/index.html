@@ -1,0 +1,13 @@
+---
+layout: default
+title: "Posted in category: design"
+syntax-highlighting: yes
+---
+  <h2 class="title">Category: design</h2>
+  {% for post in site.posts %}
+    {% for category in post.categories %}
+      {%if category == "design" %}
+        {%include post.html%}
+      {%endif%}
+    {%endfor%}
+  {% endfor %}

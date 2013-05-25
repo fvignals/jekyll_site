@@ -1,0 +1,13 @@
+---
+layout: default
+title: "Tagged: web"
+syntax-highlighting: yes
+---
+  <h2 class="title">Tag: web</h2>
+  {% for post in site.posts %}
+    {% for tag in post.tags %}
+      {%if tag == "web" %}
+        {%include post.html%}
+      {%endif%}
+    {%endfor%}
+  {% endfor %}
