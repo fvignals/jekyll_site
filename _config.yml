@@ -2,7 +2,8 @@ safe:        true
 auto:        false
 server:      false
 server_port: 4000
-base-url:    /jekyll_site/
+base-url:    /
+url:        http://fvignals.github.io/jekyll_site/
 
 source:      .
 destination: ./_site
