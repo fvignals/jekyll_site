@@ -11,3 +11,25 @@ title: Your New Jekyll Site
     {% endfor %}
   </ul>
 </div>
+<hr>
+<h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+
+{% if page.title != post.title %}
+  {{ post.content | strip_html | truncate: 200 }}
+{% else %}
+	{{ content }}
+{% endif %}
+
+<ul class="meta_data">
+    <li>
+      <img src="/images/date_posted.png" alt="" width="26" height="26" /> Posted {{ post.date | date_to_string }}
+    </li>
+    {% if page.title != post.title %}
+    <li>
+      <a href="{{ post.url }}" title="{{ post.title }}"><img src="/images/read_more.png" alt="" width="26" height="26" /> Read full article</a>
+    </li>
+    {% else %}
+    <li>Tags: {% include tag_cloud.html %}</li>
+    <li>Categories: {% include category_cloud.html %}</li>
+    {% endif %}
+</ul>
