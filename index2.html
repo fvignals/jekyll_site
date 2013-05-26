@@ -7,15 +7,17 @@ title: Your New Jekyll Site
   <h1>Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
+    <h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+     {{ post.content | strip_html | truncate: 200 }}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
 <hr>
-<h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
 
 
-  {{ post.content | strip_html | truncate: 200 }}
+
+ 
 
 
 <ul class="meta_data">
