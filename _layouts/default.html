@@ -15,6 +15,11 @@
       </div>
       <div id="content">
         {{ content }}
+        {% for post in paginator.posts %}
+
+{% include post.html %}
+
+{% endfor %}
 
 <div id="pagination">
     {% if paginator.previous_page %}
