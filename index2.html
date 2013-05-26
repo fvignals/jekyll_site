@@ -14,11 +14,9 @@ title: Your New Jekyll Site
 <hr>
 <h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
 
-{% if page.title != post.title %}
+
   {{ post.content | strip_html | truncate: 200 }}
-{% else %}
-	{{ content }}
-{% endif %}
+
 
 <ul class="meta_data">
     <li>
