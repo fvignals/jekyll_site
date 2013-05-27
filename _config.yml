@@ -1,8 +1,8 @@
 safe:        true
-auto:        false
+auto:        true
 server:      false
 base-url:    /
-url:        http://fvignals.github.io/jekyll_site/
+
 
 pygments: true
 relative_permalinks: false
